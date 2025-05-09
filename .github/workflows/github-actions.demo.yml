@@ -29,7 +29,7 @@ jobs:
   
   Test:
     runs-on: ubuntu-latest
-    if: github.even.event_name == 'workflow_dispatch'
+    if: github.event.event_name == 'workflow_dispatch'
     needs: [Build]
     environment: Test
 
@@ -38,7 +38,7 @@ jobs:
 
   Load-Test:
     runs-on: ubuntu-latest
-    if: github.even.event_name == 'workflow_dispatch'
+    if: github.event.event_name == 'workflow_dispatch'
     needs: [Build]
     environment: Load-Test
 
