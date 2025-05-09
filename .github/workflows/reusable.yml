@@ -10,11 +10,11 @@ on:
     outputs:
       current-time:
         description: "Greeting time"
-        value: ${{ jobs.reusable-jobs.outputs.current-time }}
+        value: ${{ jobs.reusable-job.outputs.current-time }}
 
 jobs:
   reusable-job:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     outputs:
       current-time: ${{ steps.time.outputs.current-time }}
     steps:
